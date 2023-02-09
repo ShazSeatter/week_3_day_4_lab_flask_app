@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Planned Events</h1>
+        <div class="events-container">
+            {% for event in events %}
+            <div class="event">
+            <h2>{{event.description}}</h2>
+            <h3>{{ event.date.strftime("%b %d %Y")}}</h3>
+            <p> Type of Event: {{ event.name_of_event}} 
+            <p>Where: {{ event.location}}</p>
+            <p>Number of Guests: {{ event.num_of_guests}}</p>
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}

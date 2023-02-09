@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Plan a New Event</h1>
+
+    <form action="/events" method="post">
+        <label for="name">Type of Event:</label>
+            <input type="text" id="name" name="name">
+        <label for="guest">Number of Guests: </label>
+            <input type="text" id="guest" name="guest">
+        <label for="location">Location: </label>
+            <input type="text" id="location" name="location">
+        <label for="date">Date of event: </label>
+            <input type="date" id="date" name="event-date" value="2023-02-23"
+            min="2023-02-23" max="2024-01-01">
+        <label for="description">Description: </label>
+        <textarea name="description" id="description" cols="30" rows="3"></textarea>
+        <input type="submit" value="Add Event">
+    </form>
+{% endblock %}
+
+<!-- &#x1F5D1; -->
