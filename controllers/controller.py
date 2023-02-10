@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect
 from app import app
-from models.event_list import events, add_new_event, delete_selected_event
+from models.event_list import events, add_new_event
 from models.event import *
 import datetime
 
@@ -29,8 +29,8 @@ def add_event():
     add_new_event(new_event)
     return redirect('/events')
 
-@app.route('/events/delete/<index>', methods=['POST'])
-def delete_event(index):
-    delete = events(index)
-    delete_selected_event(delete)
-    return render_template('index.html', event=delete)
+# @app.route('/events/delete/<index>', methods=['POST'])
+# def delete_event(index):
+#     delete = events(index)
+#     delete_selected_event(delete)
+#     return render_template('index.html', event=delete)

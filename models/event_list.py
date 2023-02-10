@@ -12,5 +12,11 @@ def add_new_event(event):
     events.append(event)
 
 
-def delete_selected_event(event):
-    events.pop(event)
+# def delete_selected_event(event_name):
+#     event_to_delete = None
+#     for event in events:
+#         if event.name == event_name:
+#             event_to_delete = event
+#             break
+
+#     events.remove(event_to_delete)
